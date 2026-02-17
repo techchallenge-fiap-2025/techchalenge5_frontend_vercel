@@ -1,0 +1,232 @@
+@import "tailwindcss";
+@import "./styles/colors.css";
+
+/* Scrollbar personalizada para navegação horizontal no mobile */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Prevenir scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Garantir que o backdrop-blur funcione corretamente */
+@supports (backdrop-filter: blur(8px)) {
+  .backdrop-blur-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Estilos customizados para Toast */
+.custom-toast-container {
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+  width: auto !important;
+  max-width: 500px !important;
+}
+
+/* Toast de Erro Customizado */
+.toast-error-custom {
+  background-color: white !important;
+  border: 2px solid #ef4444 !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  max-width: 600px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+.toast-error-body {
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.toast-error-progress {
+  background: #ef4444 !important;
+  height: 3px !important;
+}
+
+/* Toast de Warning Customizado */
+.toast-warning-custom {
+  background-color: white !important;
+  border: 2px solid #fbbf24 !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  max-width: 600px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+.toast-warning-body {
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.toast-warning-progress {
+  background: #fbbf24 !important;
+  height: 3px !important;
+}
+
+/* Toast de Sucesso Customizado */
+.toast-success-custom {
+  background-color: white !important;
+  border: 2px solid #10b981 !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  max-width: 600px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+.toast-success-body {
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.toast-success-progress {
+  background: #10b981 !important;
+  height: 3px !important;
+}
+
+/* Toast de Info Customizado */
+.toast-info-custom {
+  background-color: white !important;
+  border: 2px solid #3b82f6 !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  max-width: 600px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+.toast-info-body {
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.toast-info-progress {
+  background: #3b82f6 !important;
+  height: 3px !important;
+}
+
+/* Esconder ícone padrão do toast */
+.Toastify__toast-icon {
+}
+
+/* Animação suave para linha expandida */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Botão de fechar customizado */
+.Toastify__close-button {
+  color: #000 !important;
+  opacity: 0.7 !important;
+  align-self: flex-start !important;
+  margin-top: 4px !important;
+  padding: 4px !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
+
+/* Estilos customizados para checkboxes com fundo laranja e checkmark branco */
+input[type="checkbox"]:checked {
+  background-color: #ff7a00 !important;
+  border-color: #ff7a00 !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L5.5 9.586l5.293-5.293a1 1 0 011.414 0z'/%3e%3c/svg%3e") !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Animações para filtros de cursos */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.filter-dropdown-open {
+  animation: slideDown 0.3s ease-out;
+}
+
+.filter-icon-rotate {
+  animation: rotate360 0.3s ease-out;
+}
