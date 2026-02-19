@@ -37,13 +37,19 @@ Com base na estrutura de dados e nos scripts de automação do projeto, a plataf
 * **Consumo de API:** Axios.
 * **Build Tool:** Vite.
 
+## Link de Acesso (Deploy)
+
+A plataforma está disponível para uso imediato nos seguintes ambientes:
+
+* **Frontend (Vercel):** [https://techchalenge5frontendvercel.vercel.app/login](https://techchalenge5frontendvercel.vercel.app/login))
+* **Backend (Render):** [https://techchalleng5.onrender.com/api/health](https://techchalleng5.onrender.com/api/health)
 
 
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
 * Node.js instalado (v18 ou superior).
-* Backend em execução (disponível em: [techChalenge5_backend](https://github.com/techchallenge-fiap-2025/techChalenge5_backend)).
+* Backend em execução (disponível em: [techChalenge5_backend](https://github.com/techchallenge-fiap-2025/techChalenge5_backend) ou [https://techchalleng5.onrender.com/api/health](https://techchalleng5.onrender.com/api/health)).
 
 ### Passo 1: Instalação
 No terminal, dentro da pasta do projeto, execute:
@@ -54,8 +60,14 @@ npm install
 ### Passo 2: Variáveis de Ambiente
 Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
 
+Para **desenvolvimento local**, utilize:
 ```bash
 VITE_API_URL=http://localhost:3000
+```
+
+Para o **ambiente de produção (Vercel)**, utilize:
+```bash
+VITE_API_URL=[https://techchalleng5.onrender.com](https://techchalleng5.onrender.com)
 ```
 
 ### Passo 3: Execução
